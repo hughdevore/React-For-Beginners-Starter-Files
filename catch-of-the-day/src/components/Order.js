@@ -5,7 +5,7 @@ class Order extends React.Component {
 
     renderOrder = (key) => {
         const fish = this.props.fishes[key];
-        
+
         // Make sure the fish is loaded before we continue
         if(!fish) return null;
 
@@ -21,6 +21,7 @@ class Order extends React.Component {
         return (<li key={key}>
             {count} lbs {fish.name}
             {formatPrice(count * fish.price)}
+            <button onClick={() => this.props.removeFromOrder(key)}>&times;</button>
         </li>);
     }
 
