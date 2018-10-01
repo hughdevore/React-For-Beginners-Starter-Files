@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Order from './Order';
 import Inventory from './Inventory';
@@ -14,8 +15,12 @@ class App extends React.Component {
         order: {}
     }
 
+    static propTypes = {
+        match: PropTypes.object
+    };
+
     componentDidMount() {
-        const params = this.props.match;
+        const params = this.props.match.params;
 
         // Reinstate local storage
         const localStorageRef = localStorage.getItem(params.storeId);

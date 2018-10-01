@@ -3,10 +3,10 @@ import Firebase from 'firebase';
 
 // @TODO: Connect a real firebase app
 const firebaseApp = Firebase.initializeApp({
-    apiKey: 'Find all of this in firebase (Video 18)',
-    authDomain: 'wow.com',
-    databaseURL: 'www.fakeurl.com'
-});
+    apiKey: "AIzaSyBuoMaHwHDgleAvVbBjKGQdvLtqYvc4dy4",
+    authDomain: "hd-catch-of-the-day.firebaseapp.com",
+    databaseURL: "https://hd-catch-of-the-day.firebaseio.com"
+  });
 
 const base = Rebase.createClass(firebaseApp.database());
 
